@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Association
+{
+    class DogClass
+    {
+        string dogName;
+        int dogAge;
+        DogClass(string name, int age)
+        {
+            this.dogName = name;
+            this.dogAge = age; 
+        }
+    }
+    class Owner extends DogClass
+    {
+        string ownerName;
+        Owner(string name, string dname, int dage){
+            super(dname, dage);
+            this.ownerName = name;
+        }
+    }
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            Owner obj = new Owner("Chung", "Benji", 2);
+            System.out.prinln(obj.ownerName + " is a boss of dog's age :" obj.dog.Age);
+        }
+    }
+}
